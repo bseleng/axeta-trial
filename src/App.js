@@ -1,11 +1,17 @@
-import logo from './logo.svg'
 import './App.css'
 import AxInput from './Atoms/AxInput/AxInput'
 import { useState } from 'react'
 
 const App = () => {
-  const [value, setValue] = useState('John Smith')
-  return <AxInput value={value} setValue={setValue} placeholder={'First Name Last Name'} />
+  const [value, setValue] = useState('1')
+  return (
+    <AxInput
+      value={value}
+      setValue={setValue}
+      placeholder={'First Name Last Name'}
+      validationRules={{ notEmpty: true, onlyDigits: true, noSpecials: true, onlyLetters: true }}
+    />
+  )
 }
 
 export default App

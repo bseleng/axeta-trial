@@ -1,22 +1,43 @@
 import React, { useEffect, useRef, useState } from 'react'
+import { cleanup } from '@testing-library/react'
 
 const AxInput = ({ value, setValue, validationRules, placeholder }) => {
   const [showInput, setShowInput] = useState(false)
   const [showDiv, setShowDiv] = useState(true)
   const [showError, setShowError] = useState(false)
-  const [errorMessage, setErrorMessage] = useState('Error!')
+  const [errorMessage, setErrorMessage] = useState('Unknown Error!')
   const inputRef = useRef()
 
-  const validate = () => {
-    switch (value) {
-      case '':
-        setShowError(true)
-        setErrorMessage('Cannot be empty!')
-        break
+  const validateEmpty = () => {
+    if (value === '') {
+      setShowError(true)
+      setErrorMessage('Cannot be empty!')
+    } else {
+      setErrorMessage('Unknown Error!')
+      setShowError(false)
+    }
+  }
 
-      default:
-        setErrorMessage('Error!')
-        setShowError(false)
+  const validateDigits = () => {
+    const reg = /^\d*\.?\d*$/
+    const regComa = /\,/
+    if (!value.match(reg)) {
+      setShowError(true)
+      setErrorMessage('Only digits are allowed!')
+    }
+    if (value.match(regComa)) {
+      setShowError(true)
+      setErrorMessage('Try . instead of ,')
+    }
+  }
+
+  const validateAll = () => {
+    if (validationRules.notEmpty) {
+      validateEmpty()
+    }
+
+    if (validationRules.onlyDigits) {
+      validateDigits()
     }
   }
 
@@ -49,7 +70,7 @@ const AxInput = ({ value, setValue, validationRules, placeholder }) => {
   }, [showInput])
 
   useEffect(() => {
-    validate()
+    validateAll()
   }, [value])
 
   return (
