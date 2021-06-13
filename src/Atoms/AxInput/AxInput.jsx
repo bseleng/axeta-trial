@@ -1,5 +1,5 @@
 import React, { useEffect, useRef, useState } from 'react'
-import { cleanup } from '@testing-library/react'
+import validateAll from './AxInputValidation'
 
 const AxInput = ({ value, setValue, validationRules, placeholder }) => {
   const [showInput, setShowInput] = useState(false)
@@ -7,51 +7,6 @@ const AxInput = ({ value, setValue, validationRules, placeholder }) => {
   const [showError, setShowError] = useState(false)
   const [errorMessage, setErrorMessage] = useState('Unknown Error!')
   const inputRef = useRef()
-
-  const validateEmpty = () => {
-    if (value === '') {
-      setShowError(true)
-      setErrorMessage('Cannot be empty!')
-    } else {
-      setErrorMessage('Unknown Error!')
-      setShowError(false)
-    }
-  }
-
-  const validateDigits = (bool) => {
-    const reg = /^\d*\.?\d*$/
-    const regComa = /\,/
-    if (!value.match(reg)) {
-      setShowError(true)
-      setErrorMessage('Only digits are allowed!')
-    }
-    if (value.match(regComa)) {
-      setShowError(true)
-      setErrorMessage('Try . instead of ,')
-    }
-  }
-
-  const validateSpecial = () => {
-    const reg = /[!@#$%^&*()_+="'`~?.,:;№<>[\]{}|\/\-]/
-    if (value.match(reg)) {
-      setShowError(true)
-      setErrorMessage('Special characters are not allowed!')
-    }
-  }
-
-  const validateAll = () => {
-    if (validationRules.notEmpty) {
-      validateEmpty()
-    }
-
-    if (validationRules.onlyDigits) {
-      validateDigits()
-    }
-
-    if (validationRules.noSpecials) {
-      validateSpecial()
-    }
-  }
 
   const toggleVisibility = () => {
     if (!showError) {
@@ -82,7 +37,7 @@ const AxInput = ({ value, setValue, validationRules, placeholder }) => {
   }, [showInput])
 
   useEffect(() => {
-    validateAll()
+    validateAll(value, validationRules, setShowError, setErrorMessage)
   }, [value])
 
   return (
