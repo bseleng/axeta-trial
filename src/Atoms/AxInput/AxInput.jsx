@@ -18,7 +18,7 @@ const AxInput = ({ value, setValue, validationRules, placeholder }) => {
     }
   }
 
-  const validateDigits = () => {
+  const validateDigits = (bool) => {
     const reg = /^\d*\.?\d*$/
     const regComa = /\,/
     if (!value.match(reg)) {
@@ -31,6 +31,14 @@ const AxInput = ({ value, setValue, validationRules, placeholder }) => {
     }
   }
 
+  const validateSpecial = () => {
+    const reg = /[!@#$%^&*()_+="'`~?.,:;№<>[\]{}|\/\-]/
+    if (value.match(reg)) {
+      setShowError(true)
+      setErrorMessage('Special characters are not allowed!')
+    }
+  }
+
   const validateAll = () => {
     if (validationRules.notEmpty) {
       validateEmpty()
@@ -38,6 +46,10 @@ const AxInput = ({ value, setValue, validationRules, placeholder }) => {
 
     if (validationRules.onlyDigits) {
       validateDigits()
+    }
+
+    if (validationRules.noSpecials) {
+      validateSpecial()
     }
   }
 
