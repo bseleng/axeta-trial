@@ -28,7 +28,6 @@ const validateDigits = (value, setShowError, setErrorMessage) => {
 }
 
 const validateSpecial = (value, setShowError, setErrorMessage) => {
-  console.log('hi specials')
   const reg = /[!@#$%^&*()_+="'`~?.,:;№<>[\]{}|\/\-§€µ]/
   if (value.match(reg)) {
     setShowError(true)

@@ -1,7 +1,7 @@
 import React, { useEffect, useRef, useState } from 'react'
 import validateAll from './AxInputValidation'
 
-const AxInput = ({ value, setValue, validationRules, placeholder }) => {
+const AxInput = ({ value, setValue, validationRules, placeholder, actionOnEdit }) => {
   const [showInput, setShowInput] = useState(false)
   const [showDiv, setShowDiv] = useState(true)
   const [showError, setShowError] = useState(false)
@@ -27,8 +27,16 @@ const AxInput = ({ value, setValue, validationRules, placeholder }) => {
 
   const focusInput = () => {
     if (showInput) {
-      // inputRef.current.focus()
-      inputRef.current.select()
+      switch (actionOnEdit) {
+        case 'focus':
+          inputRef.current.focus()
+          break
+        case 'select':
+          inputRef.current.select()
+          break
+        default:
+          return
+      }
     }
   }
 
@@ -41,7 +49,7 @@ const AxInput = ({ value, setValue, validationRules, placeholder }) => {
   }, [value])
 
   return (
-    <>
+    <div>
       {showInput && (
         <input
           ref={inputRef}
@@ -55,7 +63,7 @@ const AxInput = ({ value, setValue, validationRules, placeholder }) => {
       )}
       {showDiv && <div onClick={toggleVisibility}>{value}</div>}
       {showError && <div> {errorMessage} </div>}
-    </>
+    </div>
   )
 }
 

@@ -15,6 +15,7 @@ const App = () => {
         noSpecials: true,
         onlyLetters: true,
       }}
+      actionOnEdit={'select'}
     />
   )
 }
