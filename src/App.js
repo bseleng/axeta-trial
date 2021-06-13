@@ -12,12 +12,12 @@ const App = () => {
       placeholder={'Elon Musk'}
       validationRules={{
         notEmpty: true,
-        // onlyDigits: true,
-        noSpecials: true,
+        onlyDigits: true,
+        // noSpecials: true,
         onlyLetters: true,
       }}
       actionOnEdit={'focus'}
-      inputTargetStyle={'name'}
+      inputTargetStyle={'skillDuration'}
     />
   )
 }

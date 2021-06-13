@@ -78,7 +78,7 @@ const AxInput = ({ value, setValue, validationRules, placeholder, actionOnEdit, 
         </>
       )}
       {showDiv && (
-        <div className={` ${dynamicClasses.input}`} onClick={toggleVisibility}>
+        <div className={` ${dynamicClasses.div}`} onClick={toggleVisibility}>
           {value}
         </div>
       )}
