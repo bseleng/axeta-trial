@@ -1,18 +1,18 @@
-import React from 'react'
+import React, { useState } from 'react'
 
 const AxInput = ({ value, setValue, validation, errorMessage }) => {
-    const LocalInput = () => {
-        return <input value={value} />
-    }
+  const [showInput, setShowInput] = useState(false)
+  const [showDiv, setShowDiv] = useState(true)
+  const handleInputChange = (e) => {
+    setValue(e.target.value)
+  }
 
-    const LocalDiv = () => {
-        return <div> {value}</div>
-    }
-
-    return (
-        <>
-            <LocalDiv />
-            <LocalInput />
-        </>
-    )
+  return (
+    <>
+      {showInput && <input value={value} onInput={handleInputChange} />}
+      {showDiv && <div> {value}</div>}
+    </>
+  )
 }
+
+export default AxInput
