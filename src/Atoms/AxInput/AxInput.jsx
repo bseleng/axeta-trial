@@ -1,13 +1,30 @@
 import React, { useEffect, useRef, useState } from 'react'
 
-const AxInput = ({ value, setValue, validation, errorMessage }) => {
+const AxInput = ({ value, setValue, validationRules, placeholder }) => {
   const [showInput, setShowInput] = useState(false)
   const [showDiv, setShowDiv] = useState(true)
+  const [showError, setShowError] = useState(false)
+  const [errorMessage, setErrorMessage] = useState('Error!')
   const inputRef = useRef()
 
+  const validate = () => {
+    switch (value) {
+      case '':
+        setShowError(true)
+        setErrorMessage('Cannot be empty!')
+        break
+
+      default:
+        setErrorMessage('Error!')
+        setShowError(false)
+    }
+  }
+
   const toggleVisibility = () => {
-    setShowDiv(!showDiv)
-    setShowInput(!showInput)
+    if (!showError) {
+      setShowDiv(!showDiv)
+      setShowInput(!showInput)
+    }
   }
 
   const handleKeys = (e) => {
@@ -31,6 +48,10 @@ const AxInput = ({ value, setValue, validation, errorMessage }) => {
     focusInput()
   }, [showInput])
 
+  useEffect(() => {
+    validate()
+  }, [value])
+
   return (
     <>
       {showInput && (
@@ -40,9 +61,12 @@ const AxInput = ({ value, setValue, validation, errorMessage }) => {
           onInput={handleInputChange}
           onBlur={toggleVisibility}
           onKeyPress={handleKeys}
+          placeholder={placeholder}
+          required={true}
         />
       )}
-      {showDiv && <div onClick={toggleVisibility}> {value}</div>}
+      {showDiv && <div onClick={toggleVisibility}>{value}</div>}
+      {showError && <div> {errorMessage} </div>}
     </>
   )
 }
