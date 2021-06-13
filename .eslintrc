@@ -1,1 +1,1 @@
-{  "extends": ["eslint:recommended", "plugin:react/recommended"],  "rules": {   "react/jsx-max-props-per-line": [1, { "maximum": 1, "when":"always" }]  }}
+{  "parser": "babel-eslint",  "extends": ["plugin:react-hooks/recommended"],  "rules": {    "react/jsx-uses-react": "off",    "react/react-in-jsx-scope": "off"  }}

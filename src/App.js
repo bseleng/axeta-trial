@@ -1,3 +1,4 @@
+import React from 'react'
 import './App.css'
 import AxInput from './Atoms/AxInput/AxInput'
 import { useState } from 'react'

@@ -1,5 +1,7 @@
 import React, { useEffect, useRef, useState } from 'react'
 import validateAll from './AxInputValidation'
+import classes from './AxInput.module.css'
+import { AiFillCheckCircle, AiFillCloseCircle } from 'react-icons/ai'
 
 const AxInput = ({ value, setValue, validationRules, placeholder, actionOnEdit }) => {
   const [showInput, setShowInput] = useState(false)
@@ -49,20 +51,31 @@ const AxInput = ({ value, setValue, validationRules, placeholder, actionOnEdit }
   }, [value])
 
   return (
-    <div>
+    <div className={classes.wrapper}>
       {showInput && (
-        <input
-          ref={inputRef}
-          value={value}
-          onInput={handleInputChange}
-          onBlur={toggleVisibility}
-          onKeyPress={handleKeys}
-          placeholder={placeholder}
-          required={true}
-        />
+        <>
+          <input
+            ref={inputRef}
+            value={value}
+            onInput={handleInputChange}
+            onBlur={toggleVisibility}
+            onKeyPress={handleKeys}
+            placeholder={placeholder}
+            className={`${classes.input}`}
+          />
+          {!showError ? (
+            <i className={`${classes.icon} ${classes.iconOk}`}>
+              <AiFillCheckCircle />
+            </i>
+          ) : (
+            <i className={`${classes.icon} ${classes.iconNo}`}>
+              <AiFillCloseCircle />
+            </i>
+          )}
+        </>
       )}
       {showDiv && <div onClick={toggleVisibility}>{value}</div>}
-      {showError && <div> {errorMessage} </div>}
+      {showError && <div className={classes.errorMessage}> {errorMessage} </div>}
     </div>
   )
 }
