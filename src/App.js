@@ -9,14 +9,15 @@ const App = () => {
     <AxInput
       value={value}
       setValue={setValue}
-      placeholder={'First Name Last Name'}
+      placeholder={'Elon Musk'}
       validationRules={{
         notEmpty: true,
         // onlyDigits: true,
         noSpecials: true,
         onlyLetters: true,
       }}
-      actionOnEdit={'select'}
+      actionOnEdit={'focus'}
+      inputTargetStyle={'name'}
     />
   )
 }

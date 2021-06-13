@@ -2,13 +2,15 @@ import React, { useEffect, useRef, useState } from 'react'
 import validateAll from './AxInputValidation'
 import classes from './AxInput.module.css'
 import { AiFillCheckCircle, AiFillCloseCircle } from 'react-icons/ai'
+import { AxInputDynamicStyles } from './AxInputDynamicStyles'
 
-const AxInput = ({ value, setValue, validationRules, placeholder, actionOnEdit }) => {
+const AxInput = ({ value, setValue, validationRules, placeholder, actionOnEdit, inputTargetStyle }) => {
   const [showInput, setShowInput] = useState(false)
   const [showDiv, setShowDiv] = useState(true)
   const [showError, setShowError] = useState(false)
   const [errorMessage, setErrorMessage] = useState('Unknown Error!')
   const inputRef = useRef()
+  const dynamicClasses = AxInputDynamicStyles(inputTargetStyle, classes, showError)
 
   const toggleVisibility = () => {
     if (!showError) {
@@ -61,7 +63,8 @@ const AxInput = ({ value, setValue, validationRules, placeholder, actionOnEdit }
             onBlur={toggleVisibility}
             onKeyPress={handleKeys}
             placeholder={placeholder}
-            className={`${classes.input}`}
+            // className={`${classes.input} ${classes[inputSizeStyle]}`}
+            className={`${dynamicClasses.input}`}
           />
           {!showError ? (
             <i className={`${classes.icon} ${classes.iconOk}`}>
@@ -74,8 +77,12 @@ const AxInput = ({ value, setValue, validationRules, placeholder, actionOnEdit }
           )}
         </>
       )}
-      {showDiv && <div onClick={toggleVisibility}>{value}</div>}
-      {showError && <div className={classes.errorMessage}> {errorMessage} </div>}
+      {showDiv && (
+        <div className={` ${dynamicClasses.input}`} onClick={toggleVisibility}>
+          {value}
+        </div>
+      )}
+      {showError && <div className={`${classes.errorMessage} `}> {errorMessage} </div>}
     </div>
   )
 }
