@@ -13,13 +13,13 @@ const validateDigits = (value, setShowError, setErrorMessage) => {
   const reg = /^\d*\.?\d*$/
   const regComma = /,/
 
-  if (!value.match(regLong)) {
-    setShowError(true)
-    setErrorMessage('Only one digit after decimal is allowed!')
-  }
   if (!value.match(reg)) {
     setShowError(true)
     setErrorMessage('Only digits are allowed!')
+  }
+  if (!value.match(regLong)) {
+    setShowError(true)
+    setErrorMessage('Only one digit after decimal is allowed!')
   }
   if (value.match(regComma)) {
     setShowError(true)

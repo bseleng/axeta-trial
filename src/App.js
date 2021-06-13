@@ -4,7 +4,7 @@ import AxInput from './Atoms/AxInput/AxInput'
 import { useState } from 'react'
 
 const App = () => {
-  const [value, setValue] = useState('3')
+  const [value, setValue] = useState('3.1')
   return (
     <AxInput
       value={value}

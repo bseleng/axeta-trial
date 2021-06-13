@@ -27,25 +27,21 @@ export const AxInputDynamicStyles = (inputTargetStyle, classes, showError) => {
       case 'name':
         return {
           input: `${classes.inputError} ${classes.inputBiggest}`,
-          errorMessage: `${classes.errorMessage}`,
           div: ` ${classes.inputBiggest}`,
         }
       case 'location':
         return {
           input: `${classes.inputError} ${classes.inputMedium}`,
-          errorMessage: `${classes.errorMessage}`,
           div: ` ${classes.inputMedium}`,
         }
       case 'skillName':
         return {
           input: `${classes.inputError} ${classes.inputSmaller}`,
-          errorMessage: `${classes.errorMessage}`,
           div: `${classes.skillName}`,
         }
       case 'skillDuration':
         return {
           input: `${classes.input} ${classes.inputSmallest}`,
-          errorMessage: `${classes.errorMessage}`,
           div: ` ${classes.skillDuration}`,
         }
     }
