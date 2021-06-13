@@ -11,7 +11,7 @@ const validateEmpty = (value, setShowError, setErrorMessage) => {
 const validateDigits = (value, setShowError, setErrorMessage) => {
   const regLong = /^\d*\.?\d$/
   const reg = /^\d*\.?\d*$/
-  const regComma = /\,/
+  const regComma = /,/
 
   if (!value.match(regLong)) {
     setShowError(true)
@@ -28,7 +28,8 @@ const validateDigits = (value, setShowError, setErrorMessage) => {
 }
 
 const validateSpecial = (value, setShowError, setErrorMessage) => {
-  const reg = /[!@#$%^&*()_+="'`~?.,:;№<>[\]{}|\/\-]§€µ/
+  console.log('hi specials')
+  const reg = /[!@#$%^&*()_+="'`~?.,:;№<>[\]{}|\/\-§€µ]/
   if (value.match(reg)) {
     setShowError(true)
     setErrorMessage('Special characters are not allowed!')

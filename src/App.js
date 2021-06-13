@@ -11,8 +11,8 @@ const App = () => {
       placeholder={'First Name Last Name'}
       validationRules={{
         notEmpty: true,
-        onlyDigits: true,
-        // noSpecials: true,
+        // onlyDigits: true,
+        noSpecials: true,
         onlyLetters: true,
       }}
     />
