@@ -1,6 +1,6 @@
 import React from 'react'
 import AtmHeading from '../../Atoms/AtmHeading/AtmHeading'
-import AtmSectionContent from '../../Atoms/AtmSection/AtmSectionContent'
+import AtmSectionContent from '../../Atoms/AtmSectionContent/AtmSectionContent'
 import classes from './MolSection.module.css'
 
 const MolSection = ({ text, content, type }) => {
