@@ -29,13 +29,19 @@ const OrgMain = () => {
       <MolSection
         text={'The Most Amaizing...'}
         type={'quote'}
-        content={[{ text: 'The only true wisdom is in knowing you know nothing...' }]}
+        content={[
+          { text: 'The only true wisdom is in knowing you know nothing...' },
+        ]}
       />
 
       <MolSection
         text={'In clients I look for...'}
         type={'quote'}
-        content={[{ text: 'There is only one good, knowledge, and one evil, ignorance.' }]}
+        content={[
+          {
+            text: 'There is only one good, knowledge, and one evil, ignorance.',
+          },
+        ]}
       />
     </main>
   )

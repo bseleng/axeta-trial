@@ -4,7 +4,13 @@ import { stackoverflowLight } from 'react-syntax-highlighter/dist/esm/styles/hlj
 
 const AtmCodeHighlighter = ({ codeString }) => {
   return (
-    <SyntaxHighlighter language="javascript" style={stackoverflowLight} showLineNumbers wrapLines wrapLongLines>
+    <SyntaxHighlighter
+      language="javascript"
+      style={stackoverflowLight}
+      showLineNumbers
+      wrapLines
+      wrapLongLines
+    >
       {codeString}
     </SyntaxHighlighter>
   )

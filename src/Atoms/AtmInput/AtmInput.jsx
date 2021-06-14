@@ -5,13 +5,24 @@ import { AiFillCheckCircle, AiFillCloseCircle } from 'react-icons/ai'
 import { AxInputDynamicStyles } from './AxInputDynamicStyles'
 import AxAddYears from './AxAddYears'
 
-const AtmInput = ({ value, setValue, validationRules, placeholder, actionOnEdit, inputTargetStyle }) => {
+const AtmInput = ({
+  value,
+  setValue,
+  validationRules,
+  placeholder,
+  actionOnEdit,
+  inputTargetStyle,
+}) => {
   const [showInput, setShowInput] = useState(false)
   const [showDiv, setShowDiv] = useState(true)
   const [showError, setShowError] = useState(false)
   const [errorMessage, setErrorMessage] = useState('Unknown Error!')
   const inputRef = useRef()
-  const dynamicClasses = AxInputDynamicStyles(inputTargetStyle, classes, showError)
+  const dynamicClasses = AxInputDynamicStyles(
+    inputTargetStyle,
+    classes,
+    showError
+  )
 
   const toggleVisibility = () => {
     if (!showError) {
@@ -83,7 +94,9 @@ const AtmInput = ({ value, setValue, validationRules, placeholder, actionOnEdit,
           <AxAddYears value={value} inputTargetStyle={inputTargetStyle} />
         </div>
       )}
-      {showError && <div className={`${classes.errorMessage} `}> {errorMessage} </div>}
+      {showError && (
+        <div className={`${classes.errorMessage} `}> {errorMessage} </div>
+      )}
     </div>
   )
 }

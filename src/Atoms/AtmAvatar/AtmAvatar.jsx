@@ -12,8 +12,19 @@ const AtmAvatar = ({ avatar = defaultPic, setAvatar }) => {
   return (
     <>
       <label htmlFor="image_uploads">
-        <input type={'file'} disabled={!allowEdit} accept="image/*" className={classes.input} id={'image_uploads'} />
-        <img src={avatar} alt="profile picture" onClick={handleClick} className={classes.img} />
+        <input
+          type={'file'}
+          disabled={!allowEdit}
+          accept="image/*"
+          className={classes.input}
+          id={'image_uploads'}
+        />
+        <img
+          src={avatar}
+          alt="profile picture"
+          onClick={handleClick}
+          className={classes.img}
+        />
         {allowEdit ? (
           <span className={classes.icon}>
             <RiRefreshFill />

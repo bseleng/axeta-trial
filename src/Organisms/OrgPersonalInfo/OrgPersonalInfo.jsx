@@ -3,7 +3,7 @@ import classes from './OrgPersonalInfo.module.css'
 import AtmAvatar from '../../Atoms/AtmAvatar/AtmAvatar'
 import AtmInput from '../../Atoms/AtmInput/AtmInput'
 
-const OrgPersonalInfo = ({ userName, setUserName }) => {
+const OrgPersonalInfo = ({ userName, setUserName, location, setLocation }) => {
   return (
     <div className={classes.wrapper}>
       <div className={classes.imageWrapper}>
@@ -22,9 +22,9 @@ const OrgPersonalInfo = ({ userName, setUserName }) => {
           inputTargetStyle={'name'}
         />
         <AtmInput
-          value={'Protland, Oregon, USA'}
-          placeholder={'City'}
-          // setValue={setValue}
+          value={location}
+          placeholder={'City, Country'}
+          setValue={setLocation}
           validationRules={{
             notEmpty: true,
             noSpecials: true,
