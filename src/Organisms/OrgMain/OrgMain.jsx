@@ -2,7 +2,7 @@ import React from 'react'
 import MolSection from '../../Molecules/MolSection/MolSection'
 import classes from './OrgMain.module.css'
 
-const OrgMain = () => {
+const OrgMain = ({ skills, setSkills }) => {
   return (
     <main className={classes.main}>
       <MolSection
@@ -16,15 +16,7 @@ const OrgMain = () => {
         ]}
       />
 
-      <MolSection
-        text={'Experience'}
-        type={'experience'}
-        content={[
-          { text: 'PHP', duration: '6' },
-          { text: 'Ruby', duration: '2' },
-          { text: 'JavaScript', duration: '4.5' },
-        ]}
-      />
+      <MolSection text={'Experience'} type={'experience'} content={skills} />
 
       <MolSection
         text={'The Most Amaizing...'}

@@ -14,13 +14,9 @@ const OrgPersonalInfo = ({
   const [tempSkill, setTempSkill] = useState('+')
 
   const addSkill = (value) => {
-    setSkills((skills) => [...skills, { text: value, duration: 0 }])
-    // setTempSkill('+')
+    setSkills((skills) => [...skills, { text: value, duration: '0' }])
+    setTempSkill('+')
   }
-
-  // useEffect(() => {
-  //   addSkill()
-  // }, [tempSkill])
 
   return (
     <div className={classes.wrapper}>

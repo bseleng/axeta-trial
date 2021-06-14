@@ -23,7 +23,7 @@ const PagPortfolio = () => {
         skills={skills}
         setSkills={setSkills}
       />
-      <TmpMainAndAside />
+      <TmpMainAndAside skills={skills} setSkills={setSkills} />
     </div>
   )
 }
