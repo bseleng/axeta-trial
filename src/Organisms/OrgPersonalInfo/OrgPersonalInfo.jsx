@@ -3,7 +3,7 @@ import classes from './OrgPersonalInfo.module.css'
 import AtmAvatar from '../../Atoms/AtmAvatar/AtmAvatar'
 import AtmInput from '../../Atoms/AtmInput/AtmInput'
 
-const OrgPersonalInfo = () => {
+const OrgPersonalInfo = ({ userName, setUserName }) => {
   return (
     <div className={classes.wrapper}>
       <div className={classes.imageWrapper}>
@@ -11,9 +11,9 @@ const OrgPersonalInfo = () => {
       </div>
       <div>
         <AtmInput
-          value={'John Smith'}
+          value={userName}
           placeholder={'Name Surname'}
-          // setValue={setValue}
+          setValue={setUserName}
           validationRules={{
             notEmpty: true,
             noSpecials: true,
