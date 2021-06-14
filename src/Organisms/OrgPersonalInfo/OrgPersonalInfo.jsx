@@ -1,4 +1,4 @@
-import React from 'react'
+import React, { useEffect, useState } from 'react'
 import classes from './OrgPersonalInfo.module.css'
 import AtmAvatar from '../../Atoms/AtmAvatar/AtmAvatar'
 import AtmInput from '../../Atoms/AtmInput/AtmInput'
@@ -11,6 +11,17 @@ const OrgPersonalInfo = ({
   skills,
   setSkills,
 }) => {
+  const [tempSkill, setTempSkill] = useState('+')
+
+  const addSkill = (value) => {
+    setSkills((skills) => [...skills, { text: value, duration: 0 }])
+    // setTempSkill('+')
+  }
+
+  // useEffect(() => {
+  //   addSkill()
+  // }, [tempSkill])
+
   return (
     <div className={classes.wrapper}>
       <div className={classes.imageWrapper}>
@@ -47,8 +58,17 @@ const OrgPersonalInfo = ({
         </div>
         <div>
           {skills.map((skill) => {
-            return <span>{skill.text}</span>
+            return <span className={classes.skillName}>{skill.text}</span>
           })}
+          <AtmInput
+            value={tempSkill}
+            validationRules={{ notEmpty: true }}
+            actionOnEdit={'clear'}
+            placeholder={'Skill'}
+            inputTargetStyle={'skillName'}
+            setValue={setTempSkill}
+            addItem={addSkill}
+          />
         </div>
       </div>
     </div>

@@ -12,6 +12,7 @@ const AtmInput = ({
   placeholder,
   actionOnEdit,
   inputTargetStyle,
+  addItem,
 }) => {
   const [showInput, setShowInput] = useState(false)
   const [showDiv, setShowDiv] = useState(true)
@@ -50,6 +51,10 @@ const AtmInput = ({
         case 'select':
           inputRef.current.select()
           break
+        case 'clear':
+          inputRef.current.value = ''
+          inputRef.current.focus()
+          break
         default:
           return
       }
@@ -63,6 +68,12 @@ const AtmInput = ({
   useEffect(() => {
     validateAll(value, validationRules, setShowError, setErrorMessage)
   }, [value])
+
+  useEffect(() => {
+    if (addItem && showDiv && value !== '+') {
+      addItem(value)
+    }
+  }, [showDiv])
 
   return (
     <div className={classes.wrapper}>
