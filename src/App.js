@@ -3,7 +3,7 @@ import './App.css'
 import AtmInput from './Atoms/AtmInput/AtmInput'
 import { useState } from 'react'
 import MolSection from './Molecules/MolSection/MolSection'
-import OrgMain from './Organisms/OrgMain'
+import OrgMain from './Organisms/OrgMain/OrgMain'
 
 const App = () => {
   const [value, setValue] = useState('3.1')

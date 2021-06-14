@@ -1,5 +1,5 @@
 import React from 'react'
-import MolSection from '../Molecules/MolSection/MolSection'
+import MolSection from '../../Molecules/MolSection/MolSection'
 import classes from './OrgMain.module.css'
 
 const OrgMain = () => {
