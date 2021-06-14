@@ -25,6 +25,18 @@ const OrgMain = () => {
           { text: 'JavaScript', duration: '4.5' },
         ]}
       />
+
+      <MolSection
+        text={'The Most Amaizing...'}
+        type={'quote'}
+        content={[{ text: 'The only true wisdom is in knowing you know nothing...' }]}
+      />
+
+      <MolSection
+        text={'In clients I look for...'}
+        type={'quote'}
+        content={[{ text: 'There is only one good, knowledge, and one evil, ignorance.' }]}
+      />
     </main>
   )
 }
