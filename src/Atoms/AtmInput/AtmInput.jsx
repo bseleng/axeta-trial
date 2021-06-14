@@ -1,10 +1,10 @@
 import React, { useEffect, useRef, useState } from 'react'
-import validateAll from './AxInputValidation'
-import classes from './AxInput.module.css'
+import validateAll from './AtmInputValidation'
+import classes from './AtmInput.module.css'
 import { AiFillCheckCircle, AiFillCloseCircle } from 'react-icons/ai'
 import { AxInputDynamicStyles } from './AxInputDynamicStyles'
 
-const AxInput = ({ value, setValue, validationRules, placeholder, actionOnEdit, inputTargetStyle }) => {
+const AtmInput = ({ value, setValue, validationRules, placeholder, actionOnEdit, inputTargetStyle }) => {
   const [showInput, setShowInput] = useState(false)
   const [showDiv, setShowDiv] = useState(true)
   const [showError, setShowError] = useState(false)
@@ -87,4 +87,4 @@ const AxInput = ({ value, setValue, validationRules, placeholder, actionOnEdit, 
   )
 }
 
-export default AxInput
+export default AtmInput

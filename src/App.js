@@ -1,12 +1,12 @@
 import React from 'react'
 import './App.css'
-import AxInput from './Atoms/AxInput/AxInput'
+import AtmInput from './Atoms/AtmInput/AtmInput'
 import { useState } from 'react'
 
 const App = () => {
   const [value, setValue] = useState('3.1')
   return (
-    <AxInput
+    <AtmInput
       value={value}
       setValue={setValue}
       placeholder={'Elon Musk'}
