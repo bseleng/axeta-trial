@@ -3,6 +3,7 @@ import validateAll from './AtmInputValidation'
 import classes from './AtmInput.module.css'
 import { AiFillCheckCircle, AiFillCloseCircle } from 'react-icons/ai'
 import { AxInputDynamicStyles } from './AxInputDynamicStyles'
+import AxAddYears from './AxAddYears'
 
 const AtmInput = ({ value, setValue, validationRules, placeholder, actionOnEdit, inputTargetStyle }) => {
   const [showInput, setShowInput] = useState(false)
@@ -80,6 +81,7 @@ const AtmInput = ({ value, setValue, validationRules, placeholder, actionOnEdit,
       {showDiv && (
         <div className={` ${dynamicClasses.div}`} onClick={toggleVisibility}>
           {value}
+          <AxAddYears value={value} inputTargetStyle={inputTargetStyle} />
         </div>
       )}
       {showError && <div className={`${classes.errorMessage} `}> {errorMessage} </div>}

@@ -3,6 +3,7 @@ import './App.css'
 import AtmInput from './Atoms/AtmInput/AtmInput'
 import { useState } from 'react'
 import MolSection from './Molecules/MolSection/MolSection'
+import OrgMain from './Organisms/OrgMain'
 
 const App = () => {
   const [value, setValue] = useState('3.1')
@@ -21,17 +22,7 @@ const App = () => {
         actionOnEdit={'focus'}
         inputTargetStyle={'skillDuration'}
       />
-
-      <MolSection
-        text={'Portfolio'}
-        type={'portfolio'}
-        content={[
-          { text: 'Bootstrap 4 Material Design (Sample Link)', link: '#' },
-          { text: 'Modern JavaScript stack', link: '#' },
-          { text: 'Datepicker for twitter bootstrap', link: '#' },
-          { text: 'Fast and reliable Bootstrap widgets in Angular', link: '#' },
-        ]}
-      />
+      <OrgMain />
     </>
   )
 }
