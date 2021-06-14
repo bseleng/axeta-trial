@@ -6,7 +6,7 @@ import AtmInput from '../../Atoms/AtmInput/AtmInput'
 const OrgTopPanel = () => {
   return (
     <div className={classes.wrapper}>
-      <div>
+      <div className={classes.imageWrapper}>
         <AtmAvatar />
       </div>
       <div>
@@ -21,6 +21,18 @@ const OrgTopPanel = () => {
           actionOnEdit={'focus'}
           inputTargetStyle={'name'}
         />
+        <AtmInput
+          value={'Protland, Oregon, USA'}
+          placeholder={'City'}
+          // setValue={setValue}
+          validationRules={{
+            notEmpty: true,
+            noSpecials: true,
+          }}
+          actionOnEdit={'select'}
+          inputTargetStyle={'location'}
+        />
+        <div> &#127468;&#127463; English</div>
       </div>
     </div>
   )

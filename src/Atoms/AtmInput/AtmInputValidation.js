@@ -28,7 +28,7 @@ const validateDigits = (value, setShowError, setErrorMessage) => {
 }
 
 const validateSpecial = (value, setShowError, setErrorMessage) => {
-  const reg = /[!@#$%^&*()_+="'`~?.,:;№<>[\]{}|\/\-§€µ]/
+  const reg = /[!@#$%^&*()_+="'`~?:;№<>[\]{}|\/\-§€µ]/
   if (value.match(reg)) {
     setShowError(true)
     setErrorMessage('Special characters are not allowed!')

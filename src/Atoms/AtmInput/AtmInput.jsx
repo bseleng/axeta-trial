@@ -64,7 +64,6 @@ const AtmInput = ({ value, setValue, validationRules, placeholder, actionOnEdit,
             onBlur={toggleVisibility}
             onKeyPress={handleKeys}
             placeholder={placeholder}
-            // className={`${classes.input} ${classes[inputSizeStyle]}`}
             className={`${dynamicClasses.input}`}
           />
           {!showError ? (
