@@ -1,1 +1,1 @@
-.wrapper {    width: 85%;    display: flex;;}
+.wrapper {    /*width: 85%;*/    display: flex;    flex-basis: 100%;}
