@@ -5,8 +5,13 @@ import TmpTopPanel from '../Templates/TmpTopPanel/TmpTopPanel'
 
 const PagPortfolio = () => {
   const [userName, setUserName] = useState('John Smith')
-  const [location, setLocation] = useState('Protland, Oregon, USA')
-  const [skills, setSkills] = useState([])
+  const [location, setLocation] = useState('Portland, Oregon, USA')
+
+  const [skills, setSkills] = useState([
+    { text: 'PHP', duration: '6' },
+    { text: 'Ruby', duration: '2' },
+    { text: 'JavaScript', duration: '4.5' },
+  ])
 
   return (
     <div className={classes.wrapper}>
@@ -15,6 +20,8 @@ const PagPortfolio = () => {
         setUserName={setUserName}
         location={location}
         setLocation={setLocation}
+        skills={skills}
+        setSkills={setSkills}
       />
       <TmpMainAndAside />
     </div>

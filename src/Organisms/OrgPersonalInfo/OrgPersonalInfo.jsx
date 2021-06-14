@@ -3,7 +3,14 @@ import classes from './OrgPersonalInfo.module.css'
 import AtmAvatar from '../../Atoms/AtmAvatar/AtmAvatar'
 import AtmInput from '../../Atoms/AtmInput/AtmInput'
 
-const OrgPersonalInfo = ({ userName, setUserName, location, setLocation }) => {
+const OrgPersonalInfo = ({
+  userName,
+  setUserName,
+  location,
+  setLocation,
+  skills,
+  setSkills,
+}) => {
   return (
     <div className={classes.wrapper}>
       <div className={classes.imageWrapper}>
@@ -37,6 +44,11 @@ const OrgPersonalInfo = ({ userName, setUserName, location, setLocation }) => {
             &#127468;&#127463;&nbsp;
           </span>
           English
+        </div>
+        <div>
+          {skills.map((skill) => {
+            return <span>{skill.text}</span>
+          })}
         </div>
       </div>
     </div>
