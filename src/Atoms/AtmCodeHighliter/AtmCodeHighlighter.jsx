@@ -1,11 +1,13 @@
 import React from 'react'
 import SyntaxHighlighter from 'react-syntax-highlighter'
-import { docco } from 'react-syntax-highlighter/dist/esm/styles/hljs'
-const Component = () => {
-  const codeString = '(num) => num + 1'
+import { stackoverflowLight } from 'react-syntax-highlighter/dist/esm/styles/hljs'
+
+const AtmCodeHighlighter = ({ codeString }) => {
   return (
-    <SyntaxHighlighter language="javascript" style={docco}>
+    <SyntaxHighlighter language="javascript" style={stackoverflowLight} showLineNumbers wrapLines wrapLongLines>
       {codeString}
     </SyntaxHighlighter>
   )
 }
+
+export default AtmCodeHighlighter

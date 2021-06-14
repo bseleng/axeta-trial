@@ -1,9 +1,9 @@
-import React from 'react'
+import React, { useState } from 'react'
 import './App.css'
 import AtmInput from './Atoms/AtmInput/AtmInput'
-import { useState } from 'react'
-import MolSection from './Molecules/MolSection/MolSection'
 import OrgMain from './Organisms/OrgMain/OrgMain'
+import AtmCodeHighlighter from './Atoms/AtmCodeHighliter/AtmCodeHighlighter'
+import TmpMainAndAside from './Templates/TmpMainAndAside/TmpMainAndAside'
 
 const App = () => {
   const [value, setValue] = useState('3.1')
@@ -22,7 +22,7 @@ const App = () => {
         actionOnEdit={'focus'}
         inputTargetStyle={'skillDuration'}
       />
-      <OrgMain />
+      <TmpMainAndAside />
     </>
   )
 }
