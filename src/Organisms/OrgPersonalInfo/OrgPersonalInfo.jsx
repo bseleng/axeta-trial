@@ -1,9 +1,9 @@
 import React from 'react'
-import classes from './OrgTopPanel.module.css'
+import classes from './OrgPersonalInfo.module.css'
 import AtmAvatar from '../../Atoms/AtmAvatar/AtmAvatar'
 import AtmInput from '../../Atoms/AtmInput/AtmInput'
 
-const OrgTopPanel = () => {
+const OrgPersonalInfo = () => {
   return (
     <div className={classes.wrapper}>
       <div className={classes.imageWrapper}>
@@ -32,10 +32,15 @@ const OrgTopPanel = () => {
           actionOnEdit={'select'}
           inputTargetStyle={'location'}
         />
-        <div> &#127468;&#127463; English</div>
+        <div>
+          <span role="img" aria-label="english emoji">
+            &#127468;&#127463;&nbsp;
+          </span>
+          English
+        </div>
       </div>
     </div>
   )
 }
 
-export default OrgTopPanel
+export default OrgPersonalInfo
