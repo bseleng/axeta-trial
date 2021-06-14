@@ -4,6 +4,7 @@ import AxPortfolio from './AxPortfolio'
 import AxExperience from './AxExperience'
 import AxQuote from './AxQuote'
 import AxCode from './AxCode'
+import AxPlainText from './AxPlainText'
 
 const AtmSectionContent = ({ type, content }) => {
   const output = () => {
@@ -16,6 +17,8 @@ const AtmSectionContent = ({ type, content }) => {
         return <AxQuote classes={classes} content={content} />
       case 'code':
         return <AxCode classes={classes} content={content} />
+      case 'plainText':
+        return <AxPlainText classes={classes} content={content} />
     }
   }
 
