@@ -1,5 +1,6 @@
 import React from 'react'
 import MolSection from '../../Molecules/MolSection/MolSection'
+import { codeString } from './OrgAsideAssets'
 
 const OrgAside = () => {
   return (
@@ -9,12 +10,7 @@ const OrgAside = () => {
         type={'code'}
         content={[
           {
-            text: `<div className = 'golden-grid'>
-    <div style = 'grid-area:
-        11 / 1 / span 10 / 
-        span 12;'>
-    </div>
-</div> `,
+            text: codeString,
           },
         ]}
       />
