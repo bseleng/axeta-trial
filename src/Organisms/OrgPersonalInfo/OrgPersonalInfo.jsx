@@ -53,8 +53,12 @@ const OrgPersonalInfo = ({
           English
         </div>
         <div>
-          {skills.map((skill) => {
-            return <span className={classes.skillName}>{skill.text}</span>
+          {skills.map((skill, index) => {
+            return (
+              <span key={`skill-${index}`} className={classes.skillName}>
+                {skill.text}
+              </span>
+            )
           })}
           <AtmInput
             value={tempSkill}

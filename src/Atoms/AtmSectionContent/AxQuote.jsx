@@ -1,9 +1,9 @@
 import React from 'react'
 
 const AxQuote = ({ classes, content }) => {
-  return content.map((el) => {
+  return content.map((el, index) => {
     return (
-      <div className={classes.quoteWrapper}>
+      <div className={classes.quoteWrapper} key={`quote-${index}`}>
         <span
           className={`${classes.quotationMarks} ${classes.quotationMarksOpen}`}
         >

@@ -25,9 +25,9 @@ const AxExperience = ({ content, classes, setContent }) => {
     setContent((content) => [...sortedSkills])
   }
 
-  return content.map((el, i) => {
+  return content.map((el, index) => {
     return (
-      <div className={classes.linkWrapper}>
+      <div className={classes.linkWrapper} key={`experience-${index}`}>
         <span>&#8211;</span>
         <span className={classes.experienceName}>{el.text}</span>
         <AtmInput
@@ -40,7 +40,7 @@ const AxExperience = ({ content, classes, setContent }) => {
           }}
           actionOnEdit={'focus'}
           inputTargetStyle={'skillDuration'}
-          index={i}
+          index={index}
           updateDuration={updateSkills}
           reorderSkills={reorderSkills}
         />
