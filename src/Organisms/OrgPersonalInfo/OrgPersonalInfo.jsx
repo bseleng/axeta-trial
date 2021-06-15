@@ -23,7 +23,7 @@ const OrgPersonalInfo = ({
       <div className={classes.imageWrapper}>
         <AtmAvatar />
       </div>
-      <div>
+      <div className={classes.infoWrapper}>
         <AtmInput
           value={userName}
           placeholder={'Name Surname'}
