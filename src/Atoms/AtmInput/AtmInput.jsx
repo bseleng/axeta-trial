@@ -15,7 +15,7 @@ const AtmInput = ({
   addItem,
   index,
   updateDuration,
-  auxValue,
+  reorderSkills,
 }) => {
   const [showInput, setShowInput] = useState(false)
   const [showDiv, setShowDiv] = useState(true)

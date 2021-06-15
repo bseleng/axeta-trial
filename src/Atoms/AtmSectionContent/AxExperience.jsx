@@ -10,6 +10,22 @@ const AxExperience = ({ content, classes, setContent }) => {
     setContent(content=> tempContent)
   }
 
+  const sortSkills = (a, b) => {
+    if (parseInt(a.duration) > parseInt(b.duration)) {
+      return -1
+    }
+    if (parseInt(a.duration) < parseInt(b.duration)) {
+      return 1
+    }
+    return 0
+  }
+
+  const reorderSkills = () => {
+    const sortedSkills = content.sort(sortSkills)
+    setContent(content => sortedSkills)
+
+  }
+
   return content.map((el, i) => {
     return (
       <div className={classes.linkWrapper}>
@@ -17,7 +33,7 @@ const AxExperience = ({ content, classes, setContent }) => {
         <span className={classes.experienceName}>{el.text}</span>
         <AtmInput
           value={el.duration}
-          placeholder={1}
+          placeholder={'00'}
           setValue={setTempDuration}
           validationRules={{
             notEmpty: true,
@@ -27,7 +43,7 @@ const AxExperience = ({ content, classes, setContent }) => {
           inputTargetStyle={'skillDuration'}
           index={i}
           updateDuration={updateSkills}
-          auxValue={tempDuration}
+          reorderSkills={reorderSkills}
         />
       </div>
     )
