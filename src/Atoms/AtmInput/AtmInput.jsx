@@ -34,7 +34,7 @@ const AtmInput = ({
       setShowInput(!showInput)
     }
 
-    if(reorderSkills && !showDiv) {
+    if (reorderSkills && !showDiv) {
       reorderSkills()
     }
   }
@@ -46,7 +46,7 @@ const AtmInput = ({
   }
 
   const handleInputChange = (e) => {
-    if(updateDuration) {
+    if (updateDuration) {
       setValue(e.target.value)
       updateDuration(index, e.target.value)
     } else {
@@ -118,7 +118,7 @@ const AtmInput = ({
         </div>
       )}
       {showError && (
-        <div className={`${classes.errorMessage} `}> {errorMessage} </div>
+        <div className={` ${dynamicClasses.error}`}> {errorMessage} </div>
       )}
     </div>
   )
