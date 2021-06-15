@@ -6,13 +6,13 @@ import AxQuote from './AxQuote'
 import AxCode from './AxCode'
 import AxPlainText from './AxPlainText'
 
-const AtmSectionContent = ({ type, content }) => {
+const AtmSectionContent = ({ type, content, setContent }) => {
   const output = () => {
     switch (type) {
       case 'portfolio':
         return <AxPortfolio classes={classes} content={content} />
       case 'experience':
-        return <AxExperience classes={classes} content={content} />
+        return <AxExperience classes={classes} content={content} setContent={setContent} />
       case 'quote':
         return <AxQuote classes={classes} content={content} />
       case 'code':

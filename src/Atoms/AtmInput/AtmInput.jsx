@@ -13,6 +13,9 @@ const AtmInput = ({
   actionOnEdit,
   inputTargetStyle,
   addItem,
+  index,
+  updateDuration,
+  auxValue,
 }) => {
   const [showInput, setShowInput] = useState(false)
   const [showDiv, setShowDiv] = useState(true)
@@ -39,7 +42,12 @@ const AtmInput = ({
   }
 
   const handleInputChange = (e) => {
-    setValue(e.target.value)
+    if(updateDuration) {
+      setValue(e.target.value)
+      updateDuration(index, e.target.value)
+    } else {
+      setValue(e.target.value)
+    }
   }
 
   const focusInput = () => {

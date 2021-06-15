@@ -1,4 +1,4 @@
-import React from 'react'
+import React, { useEffect } from 'react'
 import MolSection from '../../Molecules/MolSection/MolSection'
 import classes from './OrgMain.module.css'
 
@@ -16,7 +16,7 @@ const OrgMain = ({ skills, setSkills }) => {
         ]}
       />
 
-      <MolSection text={'Experience'} type={'experience'} content={skills} />
+      <MolSection text={'Experience'} type={'experience'} content={skills} setContent={setSkills}/>
 
       <MolSection
         text={'The Most Amaizing...'}
