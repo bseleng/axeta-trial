@@ -33,6 +33,10 @@ const AtmInput = ({
       setShowDiv(!showDiv)
       setShowInput(!showInput)
     }
+
+    if(reorderSkills && !showDiv) {
+      reorderSkills()
+    }
   }
 
   const handleKeys = (e) => {

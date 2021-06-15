@@ -22,9 +22,11 @@ const AxExperience = ({ content, classes, setContent }) => {
 
   const reorderSkills = () => {
     const sortedSkills = content.sort(sortSkills)
-    setContent(content => sortedSkills)
+    setContent(sortedSkills)
+    setTempDuration('')
 
   }
+
 
   return content.map((el, i) => {
     return (
