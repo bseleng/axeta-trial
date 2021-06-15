@@ -6,8 +6,8 @@ const AxExperience = ({ content, classes, setContent }) => {
 
   const updateSkills = (index, value) => {
     const tempContent = [...content]
-    tempContent.splice(index,1, {text: content[index].text, duration: value})
-    setContent(content=> tempContent)
+    tempContent.splice(index, 1, { text: content[index].text, duration: value })
+    setContent((content) => [...tempContent])
   }
 
   const sortSkills = (a, b) => {
@@ -22,11 +22,8 @@ const AxExperience = ({ content, classes, setContent }) => {
 
   const reorderSkills = () => {
     const sortedSkills = content.sort(sortSkills)
-    setContent(sortedSkills)
-    setTempDuration('')
-
+    setContent((content) => [...sortedSkills])
   }
-
 
   return content.map((el, i) => {
     return (
