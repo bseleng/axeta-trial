@@ -8,40 +8,41 @@ const AtmAvatar = ({ avatar = defaultPic }) => {
   const [file, setFile] = useState(null)
   const fileRef = useRef()
 
+
   const handleClick = () => {
-    setAllowEdit(true)
+      setAllowEdit(true)
   }
 
   const handleUpload = () => {
-    setFile(fileRef.current.files[0])
+    if (fileRef.current.files && fileRef.current.files[0])
+      setFile(fileRef.current.files[0])
     setAllowEdit(false)
   }
 
   return (
-    <>
-      <label htmlFor="image_uploads">
+    <div>
+      <label htmlFor='image_uploads'>
         <input
           ref={fileRef}
           onChange={handleUpload}
+          onInput={handleClick}
           type={'file'}
           disabled={!allowEdit}
-          accept="image/*"
+          accept='image/*'
           className={classes.input}
           id={'image_uploads'}
         />
         <img
           src={file ? URL.createObjectURL(file) : avatar}
-          alt="profile picture"
+          alt='profile picture'
           onClick={handleClick}
           className={classes.img}
         />
-        {allowEdit ? (
-          <span className={classes.icon}>
-            <RiRefreshFill />
-          </span>
-        ) : null}
+        <i className={classes.icon} style={{ visibility: !allowEdit ? 'hidden' : 'visible' }}>
+          <RiRefreshFill />
+        </i>
       </label>
-    </>
+    </div>
   )
 }
 export default AtmAvatar

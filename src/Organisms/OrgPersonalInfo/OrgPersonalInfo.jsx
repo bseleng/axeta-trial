@@ -46,13 +46,13 @@ const OrgPersonalInfo = ({
           actionOnEdit={'select'}
           inputTargetStyle={'location'}
         />
-        <div>
+        <div className={classes.language}>
           <span role="img" aria-label="english emoji">
             &#127468;&#127463;&nbsp;
           </span>
           English
         </div>
-        <div>
+        <div className={classes.skillWrapper}>
           {skills.map((skill, index) => {
             return (
               <span key={`skill-${index}`} className={classes.skillName}>
