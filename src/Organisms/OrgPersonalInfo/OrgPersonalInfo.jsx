@@ -76,6 +76,7 @@ const OrgPersonalInfo = ({
                 key={`skill-${index}`}
                 onClick={handleClick}
                 onMouseOver={handleHover}
+                onMouseOut={() => setDeleteIcon(null)}
                 className={classes.skillBlock}
               >
                 <span id={`skill-${index}`} className={classes.skillName}>
