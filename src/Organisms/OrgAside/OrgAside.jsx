@@ -2,6 +2,7 @@ import React from 'react'
 import MolSection from '../../Molecules/MolSection/MolSection'
 import { codeString } from './OrgAsideAssets'
 import classes from './OrgAside.module.css'
+import AtmMap from '../../Atoms/AtmMap/AtmMap'
 
 const OrgAside = () => {
   return (
@@ -41,6 +42,7 @@ const OrgAside = () => {
           ]}
         />
       </div>
+      <AtmMap />
     </aside>
   )
 }
