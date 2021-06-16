@@ -1,9 +1,9 @@
 import React, { useRef, useEffect, useState } from 'react'
 import classes from './AtmMap.module.css'
 import mapboxgl from 'mapbox-gl'
+const token = process.env.REACT_APP_MAP_API
 
-mapboxgl.accessToken =
-  'pk.eyJ1IjoiYnNlbGVuZyIsImEiOiJja3B6enM0M3cwMDF5Mm51OWJqdGV1b2dnIn0.HAcRcs_gkAADyxx9lanmEg'
+mapboxgl.accessToken = token
 const AtmMap = () => {
   const mapContainer = useRef(null)
   const map = useRef(null)
