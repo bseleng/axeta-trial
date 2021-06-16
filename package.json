@@ -1,4 +1,5 @@
 {
+  "homepage": "https://bseleng.github.io/axeta-trial",
   "name": "axeta-trial",
   "version": "0.1.0",
   "private": true,
@@ -18,7 +19,9 @@
     "build": "react-scripts build",
     "test": "react-scripts test",
     "eject": "react-scripts eject",
-    "pretty": "prettier --write \"./src/**/*.{js,jsx,json}\""
+    "pretty": "prettier --write \"./src/**/*.{js,jsx,json}\"",
+    "predeploy": "yarn build",
+    "deploy": "gh-pages -d build"
   },
   "eslintConfig": {
     "extends": [
@@ -44,6 +47,7 @@
     "eslint-config-react-app": "^6.0.0",
     "eslint-plugin-react": "^7.24.0",
     "eslint-plugin-react-hooks": "^4.2.0",
+    "gh-pages": "^3.2.1",
     "prettier": "2.3.1"
   }
 }
