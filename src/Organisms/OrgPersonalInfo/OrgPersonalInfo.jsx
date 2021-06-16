@@ -1,4 +1,4 @@
-import React, { useEffect, useState } from 'react'
+import React, { useRef, useState } from 'react'
 import classes from './OrgPersonalInfo.module.css'
 import AtmAvatar from '../../Atoms/AtmAvatar/AtmAvatar'
 import AtmInput from '../../Atoms/AtmInput/AtmInput'
@@ -11,9 +11,12 @@ const OrgPersonalInfo = ({
                            setLocation,
                            skills,
                            setSkills,
+                           deleteIcon,
+                           setDeleteIcon,
+                           deleteIconRef,
                          }) => {
   const [tempSkill, setTempSkill] = useState('+')
-  const [deleteIcon, setDeleteIcon] = useState(null)
+
 
   const addSkill = (value) => {
     setSkills((skills) => [...skills, { text: value, duration: '0' }])
@@ -24,14 +27,11 @@ const OrgPersonalInfo = ({
     const oldTarget = deleteIcon
     const fullId = e.target.id
     const numId = parseInt(fullId.substring(fullId.indexOf('-') + 1))
-    // setDeleteIcon(numId)
-    console.log('deleteIcon', deleteIcon)
-    console.log('oldTarget', oldTarget)
 
-    if(oldTarget === numId) {
+    if (oldTarget === numId) {
       setDeleteIcon(null)
       const tempSkills = [...skills]
-      tempSkills.splice(numId,1)
+      tempSkills.splice(numId, 1)
       setSkills([...tempSkills])
     } else {
       setDeleteIcon(numId)
@@ -39,7 +39,9 @@ const OrgPersonalInfo = ({
   }
 
   return (
-    <div className={classes.wrapper}>
+    <div
+      className={classes.wrapper}
+    >
       <div className={classes.imageWrapper}>
         <AtmAvatar />
       </div>
@@ -86,7 +88,10 @@ const OrgPersonalInfo = ({
                 </span>
                 {deleteIcon === index
                   ?
-                  <span className={classes.deleteIcon}>
+                  <span
+                    className={classes.deleteIcon}
+                    ref={deleteIconRef}
+                  >
                     <AiFillCloseCircle />
                   </span>
                   :
