@@ -1,6 +1,7 @@
 import React from 'react'
 import classes from './TmpTopPanel.module.css'
 import OrgPersonalInfo from '../../Organisms/OrgPersonalInfo/OrgPersonalInfo'
+import AtmPrintBtn from '../../Atoms/AtmPrintBtn/AtmPrintBtn'
 
 const TmpTopPanel = ({
   userName,
@@ -26,6 +27,7 @@ const TmpTopPanel = ({
         setDeleteIcon={setDeleteIcon}
         deleteIconRef={deleteIconRef}
       />
+      <AtmPrintBtn/>
     </div>
   )
 }

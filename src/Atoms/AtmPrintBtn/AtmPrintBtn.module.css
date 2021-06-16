@@ -1,0 +1,11 @@
+.btn {
+    font-size: 24px;
+    color: #3483CC;
+    position: absolute;
+    right: 2rem;
+    top: 2rem;
+}
+
+.btn:hover, .btn:active {
+    color: #EB5757;
+}
