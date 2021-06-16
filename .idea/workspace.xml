@@ -1,0 +1,521 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ChangeListManager">
+    <list default="true" id="6929105c-3648-4297-ae50-0e349c7c9c55" name="Default Changelist" comment="feat: add .env">
+      <change beforePath="$PROJECT_DIR$/yarn.lock" beforeDir="false" afterPath="$PROJECT_DIR$/yarn.lock" afterDir="false" />
+    </list>
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="ComposerSettings">
+    <execution />
+  </component>
+  <component name="DarkyenusTimeTracker">
+    <option name="totalTimeSeconds" value="89220" />
+    <option name="gitIntegration" value="true" />
+  </component>
+  <component name="FileTemplateManagerImpl">
+    <option name="RECENT_TEMPLATES">
+      <list>
+        <option value="JavaScript File" />
+      </list>
+    </option>
+  </component>
+  <component name="Git.Settings">
+    <option name="RECENT_BRANCH_BY_REPOSITORY">
+      <map>
+        <entry key="$PROJECT_DIR$" value="master" />
+      </map>
+    </option>
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+  </component>
+  <component name="GitSEFilterConfiguration">
+    <file-type-list>
+      <filtered-out-file-type name="LOCAL_BRANCH" />
+      <filtered-out-file-type name="REMOTE_BRANCH" />
+      <filtered-out-file-type name="TAG" />
+      <filtered-out-file-type name="COMMIT_BY_MESSAGE" />
+    </file-type-list>
+  </component>
+  <component name="GitToolBoxStore">
+    <option name="recentBranches">
+      <RecentBranches>
+        <option name="branchesForRepo">
+          <list>
+            <RecentBranchesForRepo>
+              <option name="branches">
+                <list>
+                  <RecentBranch>
+                    <option name="branchName" value="gh-pages" />
+                    <option name="lastUsedInstant" value="1623886075" />
+                  </RecentBranch>
+                  <RecentBranch>
+                    <option name="branchName" value="master" />
+                    <option name="lastUsedInstant" value="1623886074" />
+                  </RecentBranch>
+                </list>
+              </option>
+              <option name="repositoryRootUrl" value="file://$PROJECT_DIR$" />
+            </RecentBranchesForRepo>
+          </list>
+        </option>
+      </RecentBranches>
+    </option>
+  </component>
+  <component name="ProjectId" id="1tqjydcWvpzQYriGo0dCrVvnI9g" />
+  <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
+  <component name="ProjectViewState">
+    <option name="hideEmptyMiddlePackages" value="true" />
+    <option name="showLibraryContents" value="true" />
+  </component>
+  <component name="PropertiesComponent">
+    <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
+    <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
+    <property name="WebServerToolWindowFactoryState" value="false" />
+    <property name="js.linters.configure.manually.selectedeslint" value="true" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
+    <property name="node.js.detected.package.eslint" value="true" />
+    <property name="node.js.detected.package.standard" value="true" />
+    <property name="node.js.selected.package.eslint" value="(autodetect)" />
+    <property name="node.js.selected.package.standard" value="" />
+    <property name="nodejs_interpreter_path" value="node" />
+    <property name="nodejs_interpreter_path.stuck_in_default_project" value="undefined stuck path" />
+    <property name="nodejs_npm_path_reset_for_default_project" value="true" />
+    <property name="nodejs_package_manager_path" value="yarn" />
+    <property name="prettierjs.PrettierConfiguration.Package" value="C:\Users\Bogdan S\Desktop\OSPanel\domains\axeta-trial\node_modules\prettier" />
+    <property name="settings.editor.selected.configurable" value="settings.javascript.prettier" />
+    <property name="vue.rearranger.settings.migration" value="true" />
+  </component>
+  <component name="RecentsManager">
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="C:\Users\Bogdan S\Desktop\OSPanel\domains\axeta-trial\src\Assets\Images" />
+      <recent name="C:\Users\Bogdan S\Desktop\OSPanel\domains\axeta-trial\src\Templates\TmpMainAndAside" />
+      <recent name="C:\Users\Bogdan S\Desktop\OSPanel\domains\axeta-trial\src\Organisms\OrgMain" />
+    </key>
+  </component>
+  <component name="RunManager" selected="npm.npm start">
+    <configuration name="Debug Application" type="JavascriptDebugType" uri="http://localhost:3000">
+      <method v="2" />
+    </configuration>
+    <configuration name="npm start" type="js.build_tools.npm">
+      <package-json value="$PROJECT_DIR$/package.json" />
+      <command value="run" />
+      <scripts>
+        <script value="start" />
+      </scripts>
+      <node-interpreter value="project" />
+      <envs />
+      <method v="2" />
+    </configuration>
+  </component>
+  <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="6929105c-3648-4297-ae50-0e349c7c9c55" name="Default Changelist" comment="" />
+      <created>1623503768525</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1623503768525</updated>
+      <workItem from="1623503769712" duration="1231000" />
+      <workItem from="1623557039739" duration="42736000" />
+      <workItem from="1623644202055" duration="18243000" />
+      <workItem from="1623666277120" duration="29478000" />
+      <workItem from="1623772480269" duration="9522000" />
+      <workItem from="1623869359118" duration="16299000" />
+    </task>
+    <task id="LOCAL-00002" summary="style: run prettier write">
+      <created>1623568197721</created>
+      <option name="number" value="00002" />
+      <option name="presentableId" value="LOCAL-00002" />
+      <option name="project" value="LOCAL" />
+      <updated>1623568197721</updated>
+    </task>
+    <task id="LOCAL-00003" summary="feat: remove idea">
+      <created>1623568590682</created>
+      <option name="number" value="00003" />
+      <option name="presentableId" value="LOCAL-00003" />
+      <option name="project" value="LOCAL" />
+      <updated>1623568590682</updated>
+    </task>
+    <task id="LOCAL-00004" summary="style: change indent to 2 spaces">
+      <created>1623571387691</created>
+      <option name="number" value="00004" />
+      <option name="presentableId" value="LOCAL-00004" />
+      <option name="project" value="LOCAL" />
+      <updated>1623571387691</updated>
+    </task>
+    <task id="LOCAL-00005" summary="feat: add eslint config&#10;feat: add input change and click">
+      <created>1623574781170</created>
+      <option name="number" value="00005" />
+      <option name="presentableId" value="LOCAL-00005" />
+      <option name="project" value="LOCAL" />
+      <updated>1623574781170</updated>
+    </task>
+    <task id="LOCAL-00006" summary="feat: add empty value validation">
+      <created>1623577335103</created>
+      <option name="number" value="00006" />
+      <option name="presentableId" value="LOCAL-00006" />
+      <option name="project" value="LOCAL" />
+      <updated>1623577335103</updated>
+    </task>
+    <task id="LOCAL-00007" summary="feat: add digits validation">
+      <created>1623581786964</created>
+      <option name="number" value="00007" />
+      <option name="presentableId" value="LOCAL-00007" />
+      <option name="project" value="LOCAL" />
+      <updated>1623581786964</updated>
+    </task>
+    <task id="LOCAL-00008" summary="feat: add special characters validation">
+      <created>1623586204019</created>
+      <option name="number" value="00008" />
+      <option name="presentableId" value="LOCAL-00008" />
+      <option name="project" value="LOCAL" />
+      <updated>1623586204019</updated>
+    </task>
+    <task id="LOCAL-00009" summary="refactor: move validation to another file">
+      <created>1623590436808</created>
+      <option name="number" value="00009" />
+      <option name="presentableId" value="LOCAL-00009" />
+      <option name="project" value="LOCAL" />
+      <updated>1623590436808</updated>
+    </task>
+    <task id="LOCAL-00010" summary="fix: change specials validation rule">
+      <created>1623590797107</created>
+      <option name="number" value="00010" />
+      <option name="presentableId" value="LOCAL-00010" />
+      <option name="project" value="LOCAL" />
+      <updated>1623590797107</updated>
+    </task>
+    <task id="LOCAL-00011" summary="feat: add focus/select choice for input">
+      <created>1623591219390</created>
+      <option name="number" value="00011" />
+      <option name="presentableId" value="LOCAL-00011" />
+      <option name="project" value="LOCAL" />
+      <updated>1623591219390</updated>
+    </task>
+    <task id="LOCAL-00012" summary="feat: add input decoration">
+      <created>1623600993943</created>
+      <option name="number" value="00012" />
+      <option name="presentableId" value="LOCAL-00012" />
+      <option name="project" value="LOCAL" />
+      <updated>1623600993943</updated>
+    </task>
+    <task id="LOCAL-00013" summary="feat: add dynamic styles">
+      <created>1623607410138</created>
+      <option name="number" value="00013" />
+      <option name="presentableId" value="LOCAL-00013" />
+      <option name="project" value="LOCAL" />
+      <updated>1623607410138</updated>
+    </task>
+    <task id="LOCAL-00014" summary="style: add style variants for input">
+      <created>1623611288443</created>
+      <option name="number" value="00014" />
+      <option name="presentableId" value="LOCAL-00014" />
+      <option name="project" value="LOCAL" />
+      <updated>1623611288443</updated>
+    </task>
+    <task id="LOCAL-00015" summary="refactor: remove static style">
+      <created>1623613307613</created>
+      <option name="number" value="00015" />
+      <option name="presentableId" value="LOCAL-00015" />
+      <option name="project" value="LOCAL" />
+      <updated>1623613307613</updated>
+    </task>
+    <task id="LOCAL-00016" summary="init: start heading component">
+      <created>1623645289508</created>
+      <option name="number" value="00016" />
+      <option name="presentableId" value="LOCAL-00016" />
+      <option name="project" value="LOCAL" />
+      <updated>1623645289508</updated>
+    </task>
+    <task id="LOCAL-00017" summary="refactor: change naming prefix">
+      <created>1623646223013</created>
+      <option name="number" value="00017" />
+      <option name="presentableId" value="LOCAL-00017" />
+      <option name="project" value="LOCAL" />
+      <updated>1623646223013</updated>
+    </task>
+    <task id="LOCAL-00018" summary="feat: add section blueprint">
+      <created>1623646770396</created>
+      <option name="number" value="00018" />
+      <option name="presentableId" value="LOCAL-00018" />
+      <option name="project" value="LOCAL" />
+      <updated>1623646770396</updated>
+    </task>
+    <task id="LOCAL-00019" summary="style: add portfolio style&#10;style: add hover on skill duration&#10;feat: add portfolio links output">
+      <created>1623650258297</created>
+      <option name="number" value="00019" />
+      <option name="presentableId" value="LOCAL-00019" />
+      <option name="project" value="LOCAL" />
+      <updated>1623650258297</updated>
+    </task>
+    <task id="LOCAL-00020" summary="feat: add experience section layout">
+      <created>1623658032834</created>
+      <option name="number" value="00020" />
+      <option name="presentableId" value="LOCAL-00020" />
+      <option name="project" value="LOCAL" />
+      <updated>1623658032834</updated>
+    </task>
+    <task id="LOCAL-00021" summary="feat: add quote section case">
+      <created>1623664428261</created>
+      <option name="number" value="00021" />
+      <option name="presentableId" value="LOCAL-00021" />
+      <option name="project" value="LOCAL" />
+      <updated>1623664428261</updated>
+    </task>
+    <task id="LOCAL-00022" summary="init: start code highlighter">
+      <created>1623665916543</created>
+      <option name="number" value="00022" />
+      <option name="presentableId" value="LOCAL-00022" />
+      <option name="project" value="LOCAL" />
+      <updated>1623665916543</updated>
+    </task>
+    <task id="LOCAL-00023" summary="fix: reinstall node modules, eslint crash">
+      <created>1623666835148</created>
+      <option name="number" value="00023" />
+      <option name="presentableId" value="LOCAL-00023" />
+      <option name="project" value="LOCAL" />
+      <updated>1623666835148</updated>
+    </task>
+    <task id="LOCAL-00024" summary="feat: add code block">
+      <created>1623670115681</created>
+      <option name="number" value="00024" />
+      <option name="presentableId" value="LOCAL-00024" />
+      <option name="project" value="LOCAL" />
+      <updated>1623670115681</updated>
+    </task>
+    <task id="LOCAL-00025" summary="refactor: move code string to separate file">
+      <created>1623677836029</created>
+      <option name="number" value="00025" />
+      <option name="presentableId" value="LOCAL-00025" />
+      <option name="project" value="LOCAL" />
+      <updated>1623677836029</updated>
+    </task>
+    <task id="LOCAL-00026" summary="feat: finish main and aside except map">
+      <created>1623681418874</created>
+      <option name="number" value="00026" />
+      <option name="presentableId" value="LOCAL-00026" />
+      <option name="project" value="LOCAL" />
+      <updated>1623681418874</updated>
+    </task>
+    <task id="LOCAL-00027" summary="init: start topPanel">
+      <created>1623683280884</created>
+      <option name="number" value="00027" />
+      <option name="presentableId" value="LOCAL-00027" />
+      <option name="project" value="LOCAL" />
+      <updated>1623683280884</updated>
+    </task>
+    <task id="LOCAL-00028" summary="feat: add avatar">
+      <created>1623688727180</created>
+      <option name="number" value="00028" />
+      <option name="presentableId" value="LOCAL-00028" />
+      <option name="project" value="LOCAL" />
+      <updated>1623688727180</updated>
+    </task>
+    <task id="LOCAL-00029" summary="init: start skill tags">
+      <created>1623692625339</created>
+      <option name="number" value="00029" />
+      <option name="presentableId" value="LOCAL-00029" />
+      <option name="project" value="LOCAL" />
+      <updated>1623692625339</updated>
+    </task>
+    <task id="LOCAL-00030" summary="init: start start state">
+      <created>1623694177213</created>
+      <option name="number" value="00030" />
+      <option name="presentableId" value="LOCAL-00030" />
+      <option name="project" value="LOCAL" />
+      <updated>1623694177213</updated>
+    </task>
+    <task id="LOCAL-00031" summary="feat: add username state&#10;fix: input font set to inherit">
+      <created>1623694715819</created>
+      <option name="number" value="00031" />
+      <option name="presentableId" value="LOCAL-00031" />
+      <option name="project" value="LOCAL" />
+      <updated>1623694715819</updated>
+    </task>
+    <task id="LOCAL-00032" summary="style: prettier 80 char per line">
+      <created>1623696407315</created>
+      <option name="number" value="00032" />
+      <option name="presentableId" value="LOCAL-00032" />
+      <option name="project" value="LOCAL" />
+      <updated>1623696407315</updated>
+    </task>
+    <task id="LOCAL-00033" summary="feat: map skills">
+      <created>1623697171636</created>
+      <option name="number" value="00033" />
+      <option name="presentableId" value="LOCAL-00033" />
+      <option name="project" value="LOCAL" />
+      <updated>1623697171636</updated>
+    </task>
+    <task id="LOCAL-00034" summary="feat: tags add">
+      <created>1623703557748</created>
+      <option name="number" value="00034" />
+      <option name="presentableId" value="LOCAL-00034" />
+      <option name="project" value="LOCAL" />
+      <updated>1623703557748</updated>
+    </task>
+    <task id="LOCAL-00035" summary="feat: tags add new experience">
+      <created>1623704204570</created>
+      <option name="number" value="00035" />
+      <option name="presentableId" value="LOCAL-00035" />
+      <option name="project" value="LOCAL" />
+      <updated>1623704204570</updated>
+    </task>
+    <task id="LOCAL-00036" summary="fix: personal info skills get sorted as well">
+      <created>1623786763604</created>
+      <option name="number" value="00036" />
+      <option name="presentableId" value="LOCAL-00036" />
+      <option name="project" value="LOCAL" />
+      <updated>1623786763604</updated>
+    </task>
+    <task id="LOCAL-00037" summary="refactor: remove console unique key error for maps">
+      <created>1623787948122</created>
+      <option name="number" value="00037" />
+      <option name="presentableId" value="LOCAL-00037" />
+      <option name="project" value="LOCAL" />
+      <updated>1623787948122</updated>
+    </task>
+    <task id="LOCAL-00038" summary="style: minor fixes, handle extreme small">
+      <created>1623789527547</created>
+      <option name="number" value="00038" />
+      <option name="presentableId" value="LOCAL-00038" />
+      <option name="project" value="LOCAL" />
+      <updated>1623789527547</updated>
+    </task>
+    <task id="LOCAL-00039" summary="style: error messages stylization">
+      <created>1623791928348</created>
+      <option name="number" value="00039" />
+      <option name="presentableId" value="LOCAL-00039" />
+      <option name="project" value="LOCAL" />
+      <updated>1623791928348</updated>
+    </task>
+    <task id="LOCAL-00040" summary="feat: add change avatar">
+      <created>1623793645625</created>
+      <option name="number" value="00040" />
+      <option name="presentableId" value="LOCAL-00040" />
+      <option name="project" value="LOCAL" />
+      <updated>1623793645625</updated>
+    </task>
+    <task id="LOCAL-00041" summary="style: change avatar object fit to cover">
+      <created>1623793890209</created>
+      <option name="number" value="00041" />
+      <option name="presentableId" value="LOCAL-00041" />
+      <option name="project" value="LOCAL" />
+      <updated>1623793890209</updated>
+    </task>
+    <task id="LOCAL-00042" summary="feat: change deleteSkill and icon click to hover &#10;refactor: remove click logic">
+      <created>1623873532229</created>
+      <option name="number" value="00042" />
+      <option name="presentableId" value="LOCAL-00042" />
+      <option name="project" value="LOCAL" />
+      <updated>1623873532229</updated>
+    </task>
+    <task id="LOCAL-00043" summary="style: add input hovers">
+      <created>1623874311490</created>
+      <option name="number" value="00043" />
+      <option name="presentableId" value="LOCAL-00043" />
+      <option name="project" value="LOCAL" />
+      <updated>1623874311490</updated>
+    </task>
+    <task id="LOCAL-00044" summary="style: small fixes print page">
+      <created>1623875213103</created>
+      <option name="number" value="00044" />
+      <option name="presentableId" value="LOCAL-00044" />
+      <option name="project" value="LOCAL" />
+      <updated>1623875213103</updated>
+    </task>
+    <task id="LOCAL-00045" summary="fix: avatar icon on hover">
+      <created>1623876329575</created>
+      <option name="number" value="00045" />
+      <option name="presentableId" value="LOCAL-00045" />
+      <option name="project" value="LOCAL" />
+      <updated>1623876329575</updated>
+    </task>
+    <task id="LOCAL-00046" summary="style: skill delete icon fix">
+      <created>1623878320734</created>
+      <option name="number" value="00046" />
+      <option name="presentableId" value="LOCAL-00046" />
+      <option name="project" value="LOCAL" />
+      <updated>1623878320734</updated>
+    </task>
+    <task id="LOCAL-00047" summary="fix: remove icon freezing on mouse left">
+      <created>1623878492431</created>
+      <option name="number" value="00047" />
+      <option name="presentableId" value="LOCAL-00047" />
+      <option name="project" value="LOCAL" />
+      <updated>1623878492431</updated>
+    </task>
+    <task id="LOCAL-00048" summary="init: start map">
+      <created>1623878678653</created>
+      <option name="number" value="00048" />
+      <option name="presentableId" value="LOCAL-00048" />
+      <option name="project" value="LOCAL" />
+      <updated>1623878678653</updated>
+    </task>
+    <task id="LOCAL-00049" summary="feat: add map on page">
+      <created>1623881484873</created>
+      <option name="number" value="00049" />
+      <option name="presentableId" value="LOCAL-00049" />
+      <option name="project" value="LOCAL" />
+      <updated>1623881484873</updated>
+    </task>
+    <task id="LOCAL-00050" summary="feat: add .env">
+      <created>1623882485916</created>
+      <option name="number" value="00050" />
+      <option name="presentableId" value="LOCAL-00050" />
+      <option name="project" value="LOCAL" />
+      <updated>1623882485917</updated>
+    </task>
+    <option name="localTasksCounter" value="51" />
+    <servers />
+  </component>
+  <component name="TypeScriptGeneratedFilesManager">
+    <option name="version" value="3" />
+  </component>
+  <component name="Vcs.Log.Tabs.Properties">
+    <option name="TAB_STATES">
+      <map>
+        <entry key="MAIN">
+          <value>
+            <State />
+          </value>
+        </entry>
+      </map>
+    </option>
+    <option name="oldMeFiltersMigrated" value="true" />
+  </component>
+  <component name="VcsManagerConfiguration">
+    <MESSAGE value="feat: finish main and aside except map" />
+    <MESSAGE value="init: start topPanel" />
+    <MESSAGE value="feat: add avatar" />
+    <MESSAGE value="init: start skill tags" />
+    <MESSAGE value="init: start start state" />
+    <MESSAGE value="feat: add username state&#10;fix: input font set to inherit" />
+    <MESSAGE value="style: prettier 80 char per line" />
+    <MESSAGE value="feat: map skills" />
+    <MESSAGE value="feat: tags add" />
+    <MESSAGE value="feat: tags add new experience" />
+    <MESSAGE value="fix: personal info skills get sorted as well" />
+    <MESSAGE value="refactor: remove console unique key error for maps" />
+    <MESSAGE value="style: minor fixes, handle extreme small" />
+    <MESSAGE value="style: error messages stylization" />
+    <MESSAGE value="feat: add change avatar" />
+    <MESSAGE value="style: change avatar object fit to cover" />
+    <MESSAGE value="feat: change deleteSkill and icon click to hover &#10;refactor: remove click logic" />
+    <MESSAGE value="style: add input hovers" />
+    <MESSAGE value="style: small fixes print page" />
+    <MESSAGE value="fix: avatar icon on hover" />
+    <MESSAGE value="style: skill delete icon fix" />
+    <MESSAGE value="fix: remove icon freezing on mouse left" />
+    <MESSAGE value="init: start map" />
+    <MESSAGE value="feat: add map on page" />
+    <MESSAGE value="feat: add .env" />
+    <option name="LAST_COMMIT_MESSAGE" value="feat: add .env" />
+  </component>
+  <component name="XSLT-Support.FileAssociations.UIState">
+    <expand />
+    <select />
+  </component>
+</project>

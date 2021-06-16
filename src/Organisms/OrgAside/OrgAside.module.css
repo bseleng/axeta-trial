@@ -1,1 +1,0 @@
-.aside {    display: flex;    flex-direction: row;    justify-content: flex-start;    /*width: 50%;*/    flex-basis: 100%;    flex-wrap: wrap;}.aside section {    margin-right: 4rem;}
