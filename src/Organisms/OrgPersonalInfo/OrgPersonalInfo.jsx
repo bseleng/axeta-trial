@@ -76,15 +76,19 @@ const OrgPersonalInfo = ({
                 key={`skill-${index}`}
                 onClick={handleClick}
                 onMouseOver={handleHover}
+                className={classes.skillBlock}
               >
                 <span id={`skill-${index}`} className={classes.skillName}>
                   {skill.text}
                 </span>
-                {deleteIcon === index ? (
-                  <span className={classes.deleteIcon}>
-                    <AiFillCloseCircle />
-                  </span>
-                ) : null}
+                <span
+                  style={{
+                    visibility: deleteIcon === index ? 'visible' : 'hidden',
+                  }}
+                  className={classes.deleteIcon}
+                >
+                  <AiFillCloseCircle />
+                </span>
               </div>
             )
           })}
