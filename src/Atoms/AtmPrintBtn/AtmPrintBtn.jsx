@@ -3,18 +3,14 @@ import classes from './AtmPrintBtn.module.css'
 import { AiFillPrinter } from 'react-icons/ai'
 
 const AtmPrintBtn = () => {
-
   const handlePrint = () => {
     window.print()
   }
   return (
-    <span
-      onClick={handlePrint}
-      className={classes.btn}
-    >
-      <AiFillPrinter />
-    </span>
+    <div className={classes.wrapper} onClick={handlePrint}>
+      <AiFillPrinter className={classes.icon} />
+      <span>Print this page</span>
+    </div>
   )
 }
 export default AtmPrintBtn
-
