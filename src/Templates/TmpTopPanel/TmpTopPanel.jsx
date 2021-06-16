@@ -10,9 +10,6 @@ const TmpTopPanel = ({
   setLocation,
   skills,
   setSkills,
-  deleteIcon,
-  setDeleteIcon,
-  deleteIconRef
 }) => {
   return (
     <div className={classes.wrapper}>
@@ -23,11 +20,8 @@ const TmpTopPanel = ({
         setLocation={setLocation}
         skills={skills}
         setSkills={setSkills}
-        deleteIcon={deleteIcon}
-        setDeleteIcon={setDeleteIcon}
-        deleteIconRef={deleteIconRef}
       />
-      <AtmPrintBtn/>
+      <AtmPrintBtn />
     </div>
   )
 }
