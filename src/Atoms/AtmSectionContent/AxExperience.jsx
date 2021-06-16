@@ -2,7 +2,7 @@ import React, { useEffect, useState } from 'react'
 import AtmInput from '../AtmInput/AtmInput'
 
 const AxExperience = ({ content, classes, setContent }) => {
-  const [tempDuration, setTempDuration] = useState(content[1].duration)
+  const [tempDuration, setTempDuration] = useState(null)
 
   const updateSkills = (index, value) => {
     const tempContent = [...content]

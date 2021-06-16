@@ -2,20 +2,40 @@ import React, { useEffect, useState } from 'react'
 import classes from './OrgPersonalInfo.module.css'
 import AtmAvatar from '../../Atoms/AtmAvatar/AtmAvatar'
 import AtmInput from '../../Atoms/AtmInput/AtmInput'
+import { AiFillCloseCircle } from 'react-icons/ai'
 
 const OrgPersonalInfo = ({
-  userName,
-  setUserName,
-  location,
-  setLocation,
-  skills,
-  setSkills,
-}) => {
+                           userName,
+                           setUserName,
+                           location,
+                           setLocation,
+                           skills,
+                           setSkills,
+                         }) => {
   const [tempSkill, setTempSkill] = useState('+')
+  const [deleteIcon, setDeleteIcon] = useState(null)
 
   const addSkill = (value) => {
     setSkills((skills) => [...skills, { text: value, duration: '0' }])
     setTempSkill('+')
+  }
+
+  const handleClick = (e) => {
+    const oldTarget = deleteIcon
+    const fullId = e.target.id
+    const numId = parseInt(fullId.substring(fullId.indexOf('-') + 1))
+    // setDeleteIcon(numId)
+    console.log('deleteIcon', deleteIcon)
+    console.log('oldTarget', oldTarget)
+
+    if(oldTarget === numId) {
+      setDeleteIcon(null)
+      const tempSkills = [...skills]
+      tempSkills.splice(numId,1)
+      setSkills([...tempSkills])
+    } else {
+      setDeleteIcon(numId)
+    }
   }
 
   return (
@@ -47,7 +67,7 @@ const OrgPersonalInfo = ({
           inputTargetStyle={'location'}
         />
         <div className={classes.language}>
-          <span role="img" aria-label="english emoji">
+          <span role='img' aria-label='english emoji'>
             &#127468;&#127463;&nbsp;
           </span>
           English
@@ -55,9 +75,26 @@ const OrgPersonalInfo = ({
         <div className={classes.skillWrapper}>
           {skills.map((skill, index) => {
             return (
-              <span key={`skill-${index}`} className={classes.skillName}>
-                {skill.text}
-              </span>
+              <div>
+                <span
+                  key={`skill-${index}`}
+                  id={`skill-${index}`}
+                  className={classes.skillName}
+                  onClick={handleClick}
+                >
+                  {skill.text}
+                </span>
+                {deleteIcon === index
+                  ?
+                  <span className={classes.deleteIcon}>
+                    <AiFillCloseCircle />
+                  </span>
+                  :
+                  null
+
+                }
+
+              </div>
             )
           })}
           <AtmInput

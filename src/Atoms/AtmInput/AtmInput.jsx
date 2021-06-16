@@ -88,7 +88,7 @@ const AtmInput = ({
   }, [showDiv])
 
   return (
-    <div className={classes.wrapper}>
+    <div className={` ${dynamicClasses.wrapper}`}>
       {showInput && (
         <>
           <input
