@@ -9,21 +9,23 @@ const validateEmpty = (value, setShowError, setErrorMessage) => {
 }
 
 const validateDigits = (value, setShowError, setErrorMessage) => {
-  const regLong = /^\d*\.?\d$/
+  const regLong = /^\d*\.?\d?$/
   const reg = /^\d*\.?\d*$/
-  const regComma = /,/
+  const regComma = /^\d,\d?/
 
-  if (!value.match(reg)) {
-    setShowError(true)
-    setErrorMessage('Only digits are allowed!')
-  }
   if (!value.match(regLong)) {
-    setShowError(true)
     setErrorMessage('Only one digit after decimal is allowed!')
+    setShowError(true)
   }
   if (value.match(regComma)) {
-    setShowError(true)
     setErrorMessage('Try . instead of ,')
+    setShowError(true)
+  }
+  if (!value.match(reg) &&
+    !value.match(regLong) &&
+    !value.match(regComma)) {
+    setErrorMessage('Only digits are allowed!')
+    setShowError(true)
   }
 }
 

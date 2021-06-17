@@ -29,7 +29,10 @@ const AtmInput = ({
   )
 
   const toggleVisibility = () => {
-    if (!showError) {
+    if (showError) {
+      setShowDiv(false)
+      setShowInput(true)
+    } else {
       setShowDiv(!showDiv)
       setShowInput(!showInput)
     }
