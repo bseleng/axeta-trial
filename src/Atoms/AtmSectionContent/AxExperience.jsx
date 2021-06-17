@@ -37,6 +37,7 @@ const AxExperience = ({ content, classes, setContent }) => {
           validationRules={{
             notEmpty: true,
             onlyDigits: true,
+            noNegative: true,
           }}
           actionOnEdit={'focus'}
           inputTargetStyle={'skillDuration'}

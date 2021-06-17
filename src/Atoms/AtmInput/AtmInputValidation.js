@@ -29,6 +29,13 @@ const validateDigits = (value, setShowError, setErrorMessage) => {
   }
 }
 
+const validateNegative = (value, setShowError, setErrorMessage) => {
+  if (parseInt(value) < 0) {
+    setShowError(true)
+    setErrorMessage('Negative values are not allowed!')
+  }
+}
+
 const validateSpecial = (value, setShowError, setErrorMessage) => {
   const reg = /[!@#$%^&*()_+="'`~?:;№<>[\]{}|\/\-§€µ]/
   if (value.match(reg)) {
@@ -48,6 +55,10 @@ const validateAll = (value, validationRules, setShowError, setErrorMessage) => {
 
   if (validationRules.noSpecials) {
     validateSpecial(value, setShowError, setErrorMessage)
+  }
+
+  if(validationRules.noNegative) {
+    validateNegative(value, setShowError, setErrorMessage)
   }
 }
 
