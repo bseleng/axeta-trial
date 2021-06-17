@@ -6,6 +6,7 @@ import { AxInputDynamicStyles } from './AxInputDynamicStyles'
 import AxAddYears from './AxAddYears'
 
 const AtmInput = ({
+  id,
   value,
   setValue,
   validationRules,
@@ -95,6 +96,7 @@ const AtmInput = ({
       {showInput && (
         <>
           <input
+            id={id}
             ref={inputRef}
             value={value}
             onInput={handleInputChange}
@@ -115,7 +117,7 @@ const AtmInput = ({
         </>
       )}
       {showDiv && (
-        <div className={` ${dynamicClasses.div}`} onClick={toggleVisibility}>
+        <div id={id} className={` ${dynamicClasses.div}`} onClick={toggleVisibility}>
           {value}
           <AxAddYears value={value} inputTargetStyle={inputTargetStyle} />
         </div>

@@ -6,6 +6,7 @@ import TmpTopPanel from '../Templates/TmpTopPanel/TmpTopPanel'
 const PagPortfolio = () => {
   const [userName, setUserName] = useState('John Smith')
   const [location, setLocation] = useState('Portland, Oregon, USA')
+  const [isSearching, setIsSearching] = useState(false);
 
   const [skills, setSkills] = useState([
     { text: 'PHP', duration: '6' },
@@ -23,7 +24,7 @@ const PagPortfolio = () => {
         skills={skills}
         setSkills={setSkills}
       />
-      <TmpMainAndAside skills={skills} setSkills={setSkills} />
+      <TmpMainAndAside skills={skills} setSkills={setSkills} location={location} />
     </div>
   )
 }

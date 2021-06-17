@@ -53,6 +53,7 @@ const OrgPersonalInfo = ({
           inputTargetStyle={'name'}
         />
         <AtmInput
+          id={'address'}
           value={location}
           placeholder={'City, Country'}
           setValue={setLocation}

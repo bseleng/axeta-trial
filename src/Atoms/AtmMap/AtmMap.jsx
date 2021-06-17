@@ -1,5 +1,5 @@
-import React from 'react'
-import { GoogleMap, useJsApiLoader } from '@react-google-maps/api'
+import React, { useEffect, useState } from 'react'
+import { GoogleMap, Marker, useJsApiLoader } from '@react-google-maps/api'
 const apiKey = process.env.REACT_APP_MAP_API
 
 const containerStyle = {
@@ -7,12 +7,13 @@ const containerStyle = {
   height: '200px',
 }
 
-const center = {
-  lat: -3.745,
-  lng: -38.523,
-}
+const AtmMap = ({ location }) => {
 
-const AtmMap = () => {
+  const [center, setCenter] = useState({
+    lat: 40.7222993,
+    lng: -73.99590409999999
+  })
+
   const { isLoaded } = useJsApiLoader({
     id: 'google-map-script',
     googleMapsApiKey: apiKey,
@@ -30,16 +31,36 @@ const AtmMap = () => {
     setMap(null)
   }, [])
 
+  const geocode = () => {
+    const encodedLocation = encodeURI(location)
+    console.log(location)
+    console.log(encodedLocation)
+    fetch(`https://maps.googleapis.com/maps/api/geocode/json?address=${encodedLocation}&key=${apiKey}`)
+      .then((response) => {
+        return response.json()
+      })
+      .then((data) => {
+        setCenter(data.results[0].geometry.location)
+        console.log(data.results[0].geometry.location)
+      })
+  }
+
+  useEffect(() => {
+    geocode()
+  }, [location])
+
   return isLoaded ? (
     <GoogleMap
       mapContainerStyle={containerStyle}
       center={center}
-      zoom={7}
+      zoom={6}
       onLoad={onLoad}
       onUnmount={onUnmount}
     >
       { /* Child components, such as markers, info windows, etc. */}
-      <></>
+      <>
+        <Marker position={center} />
+      </>
     </GoogleMap>
   ) : <></>
 }

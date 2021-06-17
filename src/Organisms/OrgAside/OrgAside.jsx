@@ -4,7 +4,7 @@ import { codeString } from './OrgAsideAssets'
 import classes from './OrgAside.module.css'
 import AtmMap from '../../Atoms/AtmMap/AtmMap'
 
-const OrgAside = () => {
+const OrgAside = ({location}) => {
   return (
     <aside className={classes.aside}>
       <MolSection
@@ -42,7 +42,7 @@ const OrgAside = () => {
           ]}
         />
       </div>
-      <AtmMap />
+      <AtmMap location={location}/>
     </aside>
   )
 }
